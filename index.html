@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oyster Beauty Lounge | Luxury Hair & Spa Services</title>
+    <style>
+        /* CSS Reset & Variables */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        :root {
+            --primary: #d4af37; /* Soft Gold */
+            --primary-hover: #b8962d;
+            --dark: #111111;
+            --light-bg: #fdfbf7; /* Off-white pearl */
+            --text: #333333;
+            --white: #ffffff;
+            --whatsapp-color: #25d366;
+            --whatsapp-hover: #1da851;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--white);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            z-index: 1000;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--dark);
+            text-transform: uppercase;
+        }
+        .logo span {
+            color: var(--primary);
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 70vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 1rem;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        /* Buttons */
+        .btn {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+            display: inline-block;
+            text-align: center;
+        }
+        .btn:hover {
+            background-color: var(--primary-hover);
+        }
+        
+        .btn-whatsapp {
+            background-color: var(--whatsapp-color);
+            margin-top: 0.5rem;
+        }
+        .btn-whatsapp:hover {
+            background-color: var(--whatsapp-hover);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 5rem 5%;
+            text-align: center;
+        }
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: '';
+            width: 50%;
+            height: 2px;
+            background: var(--primary);
+            position: absolute;
+            bottom: -10px;
+            left: 25%;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .service-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        .service-card h3 {
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        /* Booking Section */
+        .booking {
+            background-color: var(--white);
+            padding: 5rem 5%;
+            max-width: 600px;
+            margin: 0 auto 5rem auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        .booking h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        .booking button, .booking a.btn {
+            width: 100%;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            margin-top: auto;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Oyster <span>Beauty Lounge</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#book">Book Appointment</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Discover Your Natural Radiance</h1>
+        <p>Experience world-class hair, skin, and spa treatments tailored to enhance your unique elegance.</p>
+        <a href="#book" class="btn">Book Your Experience</a>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2 class="section-title">Our Signature Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Hair Styling & Care</h3>
+                <p>From precision cuts to custom coloring and restorative treatments, transform your look with our expert stylists.</p>
+            </div>
+            <div class="service-card">
+                <h3>Skin & Facials</h3>
+                <p>Rejuvenate your complexion with customized, deep-cleansing facials using premium organic skincare products.</p>
+            </div>
+            <div class="service-card">
+                <h3>Nail Care</h3>
+                <p>Indulge in luxurious manicures and pedicures featuring high-shine gels, detailed nail art, and hydrating scrubs.</p>
+            </div>
+            <div class="service-card">
+                <h3>Bridal & Event Makeup</h3>
+                <p>Look flawless on your special day with bespoke makeup packages crafted by certified beauty artists.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Booking Form -->
+    <section class="booking" id="book">
+        <h2>Book an Appointment</h2>
+        <form id="bookingForm">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required placeholder="Jane Doe">
+            </div>
+            <div class="form-group">
+                <label for="phone">Mobile Phone Number</label>
+                <input type="tel" id="phone" name="phone" required placeholder="+1 363-333-0308">
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="jane@example.com">
+            </div>
+            <div class="form-group">
+                <label for="service">Select Service</label>
+                <select id="service" name="service" required>
+                    <option value="">-- Choose a Service --</option>
+                    <option value="Hair Styling & Care">Hair Styling & Care</option>
+                    <option value="Skin & Facials">Skin & Facials</option>
+                    <option value="Nail Care">Nail Care</option>
+                    <option value="Bridal & Event Makeup">Bridal & Event Makeup</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="date">Preferred Date</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div class="button-group">
+                <button type="submit" class="btn btn-whatsapp">Send Booking via WhatsApp</button>
+                <button type="button" id="smsBtn" class="btn">Send Booking via SMS</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <p>&copy; 2026 Oyster Beauty Lounge. All Rights Reserved.</p>
+        <p>1260 old country road , Westbury, NY 11590 | Contact: +91 9149509617</p>
+    </footer>
+
+    <script>
+        // Business mobile phone number in international format (without spaces/dashes)
+        const businessPhone = " +91 9149509617"; 
+
+        const bookingForm = document.getElementById('bookingForm');
+        const smsBtn = document.getElementById('smsBtn');
+
+        // Function to construct booking message content
+        function generateBookingMessage() {
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const serviceSelect = document.getElementById('service');
+            const service = serviceSelect.options[serviceSelect.selectedIndex].text;
+            const date = document.getElementById('date').value;
+
+            return `Hello Oyster Beauty Lounge! I would like to book an appointment:\n\n` +
+                   `• Name: ${name}\n` +
+                   `• Phone: ${phone}\n` +
+                   `• Email: ${email}\n` +
+                   `• Service: ${service}\n` +
+                   `• Date: ${date}`;
+        }
+
+        // Method 1: Send via WhatsApp
+        bookingForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const message = generateBookingMessage();
+            const whatsappUrl = `https://wa.me/${businessPhone}?text=${encodeURIComponent(message)}`;
+            
+            window.open(whatsappUrl, '_blank');
+        });
+
+        // Method 2: Send via Mobile SMS
+        smsBtn.addEventListener('click', function() {
+            if (!bookingForm.checkValidity()) {
+                bookingForm.reportValidity();
+                return;
+            }
+            const message = generateBookingMessage();
+            
+            // iOS uses '&body=', Android uses '?body='
+            const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+            const separator = isIOS ? '&' : '?';
+            const smsUrl = `sms:${businessPhone}${separator}body=${encodeURIComponent(message)}`;
+            
+            window.location.href = smsUrl;
+        });
+    </script>
+</body>
+</html>
