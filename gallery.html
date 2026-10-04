@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery Lookbook | Oyster Beauty Lounge by Shifali</title>
+
+  <!-- Google Fonts: Cormorant Garamond for luxury serif headers & Montserrat for modern UI text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            nudeBg: '#FAF6F0',        /* Warm Soft Nude/Cream background */
+            creamCard: '#FFFFFF',     /* Pure white card backgrounds */
+            creamMuted: '#F3ECE4',    /* Soft nude accent containers */
+            charcoalDark: '#221F1F',  /* Deep rich charcoal for typography */
+            charcoalMuted: '#686160',/* Muted body text */
+            roseGold: '#D8A48F',      /* Warm Rose Gold tone */
+            roseGoldHover: '#C5917C',
+            champagneGold: '#C5A059', /* Elegant Champagne Gold accent */
+            champagneLight: '#F7E7C4',
+            warmBorder: '#E8DFD5'     /* Subtle warm border line */
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Montserrat"', 'sans-serif'],
+          },
+          boxShadow: {
+            'soft-card': '0 10px 30px -10px rgba(100, 80, 70, 0.08)',
+            'hover-card': '0 20px 40px -15px rgba(180, 140, 120, 0.22)',
+            'lightbox': '0 25px 60px -12px rgba(0, 0, 0, 0.4)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FAF6F0;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #D8A48F;
+      border-radius: 999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #C5A059;
+    }
+
+    /* Hide horizontal scrollbars for pill navigation */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Soft image zoom transition */
+    .img-zoom {
+      transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    .group:hover .img-zoom {
+      transform: scale(1.08);
+    }
+  </style>
+</head>
+<body class="bg-nudeBg text-charcoalDark font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-roseGold selection:text-white">
+
+  <!-- Top Luxury Header -->
+  <header class="sticky top-0 z-30 bg-nudeBg/90 backdrop-blur-md border-b border-warmBorder transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-24 flex items-center justify-between">
+      
+      <!-- Brand Logo / Title -->
+      <a href="#" class="flex flex-col group">
+        <span class="font-serif text-2xl sm:text-3xl font-bold tracking-tight text-charcoalDark group-hover:text-roseGold transition-colors">
+          Oyster <span class="italic font-normal text-champagneGold">by Shifali</span>
+        </span>
+        <span class="text-[9px] sm:text-[10px] uppercase tracking-[0.25em] text-charcoalMuted font-medium mt-0.5">
+          Beauty Lounge • Jammu
+        </span>
+      </a>
+
+      <!-- Quick Action Contacts -->
+      <div class="flex items-center space-x-3 sm:space-x-5">
+        <a 
+          href="https://wa.me/919419100000?text=Hi%20Oyster%20by%20Shifali,%20I%20am%20viewing%20your%20Gallery%20and%20would%20like%20to%20inquire." 
+          target="_blank"
+          class="inline-flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full bg-creamCard border border-roseGold/40 text-charcoalDark hover:bg-roseGold hover:text-white hover:border-roseGold text-xs font-semibold tracking-wider uppercase transition-all duration-300 shadow-sm"
+        >
+          <i class="fa-brands fa-whatsapp text-emerald-600 group-hover:text-white text-sm"></i>
+          <span class="hidden xs:inline">Book Look</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="flex-grow">
+    
+    <!-- Hero Section -->
+    <section class="pt-10 pb-8 sm:pt-14 sm:pb-12 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center">
+      <span class="inline-block px-3.5 py-1 rounded-full bg-creamMuted text-champagneGold border border-champagneGold/30 text-[11px] font-medium tracking-widest uppercase mb-3">
+        Portfolio & Lookbook
+      </span>
+      
+      <h1 class="text-3xl sm:text-5xl font-serif font-semibold text-charcoalDark tracking-tight leading-tight">
+        Artistry in Every Detail
+      </h1>
+      
+      <p class="text-xs sm:text-sm text-charcoalMuted max-w-xl mx-auto mt-3 leading-relaxed font-light">
+        Explore signature bridal transformations, hand-painted hair color, radiant skin therapy, and couture nail art by master artist Shifali Kapoor.
+      </p>
+
+      <!-- Search Input Container -->
+      <div class="mt-8 max-w-lg mx-auto relative">
+        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-charcoalMuted/60">
+          <i class="fa-solid fa-magnifying-glass text-xs"></i>
+        </div>
+        <input 
+          type="text" 
+          id="gallery-search" 
+          oninput="handleSearchAndFilter()" 
+          placeholder="Search by hair, bridal, balayage, nails, eyes..." 
+          class="w-full bg-creamCard border border-warmBorder text-charcoalDark placeholder-charcoalMuted/50 text-xs rounded-full pl-10 pr-10 py-3.5 focus:outline-none focus:border-roseGold focus:ring-1 focus:ring-roseGold transition-all shadow-sm"
+        />
+        <button 
+          id="clear-search-btn" 
+          onclick="clearSearch()" 
+          class="hidden absolute inset-y-0 right-0 pr-4 flex items-center text-charcoalMuted hover:text-charcoalDark text-xs transition-colors"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- Gallery Filter Section -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+      <!-- Filter Pills -->
+      <div class="flex items-center justify-center gap-2 overflow-x-auto pb-2 no-scrollbar" id="category-pills">
+        <!-- Rendered dynamically by JavaScript -->
+      </div>
+      
+      <!-- Counter Status -->
+      <div class="text-center mt-3">
+        <span class="text-[11px] font-medium uppercase tracking-wider text-charcoalMuted">
+          Showing <strong id="visible-count" class="text-roseGold font-mono">0</strong> looks
+        </span>
+      </div>
+    </section>
+
+    <!-- Gallery Photo Grid -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+      <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8">
+        <!-- Photo cards rendered dynamically by JS -->
+      </div>
+
+      <!-- Empty Search Fallback -->
+      <div id="empty-state" class="hidden text-center py-16 bg-creamCard rounded-3xl border border-warmBorder max-w-md mx-auto my-6 p-8">
+        <i class="fa-regular fa-image text-4xl text-roseGold/50 mb-3"></i>
+        <h3 class="text-lg font-serif font-semibold text-charcoalDark">No Matching Looks</h3>
+        <p class="text-xs text-charcoalMuted mt-1">Try typing a different keyword or selecting another category filter.</p>
+        <button 
+          onclick="resetFilters()" 
+          class="mt-4 px-5 py-2 rounded-full bg-roseGold text-white text-xs font-medium uppercase tracking-wider hover:bg-roseGoldHover transition-colors shadow-sm"
+        >
+          Reset All Filters
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Lightbox Modal Overlay -->
+  <div 
+    id="lightbox-modal" 
+    class="fixed inset-0 z-50 hidden bg-charcoalDark/90 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 transition-opacity duration-300"
+    onclick="handleModalBackgroundClick(event)"
+  >
+    <!-- Close Button -->
+    <button 
+      onclick="closeLightbox()" 
+      class="absolute top-4 right-4 sm:top-6 sm:right-6 w-11 h-11 rounded-full bg-white/10 text-white hover:bg-roseGold hover:text-white flex items-center justify-center text-lg transition-all z-50 focus:outline-none"
+      title="Close (Esc)"
+    >
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <!-- Navigation Arrows -->
+    <button 
+      onclick="navigateLightbox(-1)" 
+      class="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/10 text-white hover:bg-roseGold flex items-center justify-center text-base transition-all z-50 focus:outline-none"
+      title="Previous (Left Arrow)"
+    >
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    
+    <button 
+      onclick="navigateLightbox(1)" 
+      class="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/10 text-white hover:bg-roseGold flex items-center justify-center text-base transition-all z-50 focus:outline-none"
+      title="Next (Right Arrow)"
+    >
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+    <!-- Lightbox Card Box -->
+    <div 
+      class="bg-creamCard rounded-3xl overflow-hidden shadow-lightbox max-w-4xl w-full max-h-[90vh] flex flex-col md:flex-row relative z-10"
+      onclick="event.stopPropagation()"
+    >
+      <!-- Image Left Column -->
+      <div class="md:w-7/12 bg-black/95 flex items-center justify-center p-2 min-h-[280px] sm:min-h-[400px]">
+        <img 
+          id="lb-image" 
+          src="" 
+          alt="High resolution look detail" 
+          class="max-h-[75vh] w-auto max-w-full object-contain rounded-xl"
+        />
+      </div>
+
+      <!-- Detail Info Right Column -->
+      <div class="md:w-5/12 p-6 sm:p-8 flex flex-col justify-between space-y-6 overflow-y-auto">
+        <div>
+          <div class="flex items-center justify-between">
+            <span id="lb-category" class="text-[10px] font-medium tracking-widest uppercase px-3 py-1 rounded-full bg-creamMuted text-roseGold border border-roseGold/20">
+              Category
+            </span>
+            <span class="text-[10px] font-mono text-charcoalMuted/60">Oyster Lookbook</span>
+          </div>
+
+          <h3 id="lb-title" class="text-2xl sm:text-3xl font-serif font-semibold text-charcoalDark mt-4 leading-snug">
+            Look Title
+          </h3>
+
+          <p id="lb-description" class="text-xs text-charcoalMuted leading-relaxed mt-3 font-light">
+            Detailed look description...
+          </p>
+        </div>
+
+        <!-- Direct WhatsApp CTA Action -->
+        <div class="pt-4 border-t border-warmBorder space-y-3">
+          <a 
+            id="lb-whatsapp-btn" 
+            href="#" 
+            target="_blank" 
+            class="w-full py-3.5 px-4 rounded-2xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2 transition-colors shadow-sm"
+          >
+            <i class="fa-brands fa-whatsapp text-base"></i>
+            <span>Inquire This Look on WhatsApp</span>
+          </a>
+          
+          <p class="text-[10px] text-center text-charcoalMuted/70">
+            Jammu Lounges: Channi Himmat & Kunjwani
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Minimalist Footer -->
+  <footer class="bg-creamCard border-t border-warmBorder py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
+      <p class="font-serif text-xl font-semibold text-charcoalDark">
+        Oyster <span class="italic font-normal text-roseGold">by Shifali</span>
+      </p>
+      <p class="text-xs text-charcoalMuted font-light max-w-md mx-auto">
+        Channi Himmat & Kunjwani Branches, Jammu, Jammu & Kashmir
+      </p>
+      <div class="pt-2 text-[11px] text-charcoalMuted/60 font-mono">
+        © 2026 oysterbyshifali.com • All Rights Reserved
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript App Logic -->
+  <script>
+
+    // 1. GALLERY DATASET
+    const GALLERY_ITEMS = [
+      {
+        id: 'img-1',
+        title: 'Royal Dogra HD Airbrush Bridal',
+        category: 'Bridal Makeovers',
+        image: 'https://images.unsplash.com/photo-1595959183082-7b570b7e08e2?auto=format&fit=crop&w=1000&q=80',
+        description: 'HD Airbrush bridal glam featuring waterproof base, traditional gold eyelid shimmer, and romantic velvet rose lip color.'
+      },
+      {
+        id: 'img-2',
+        title: 'Champagne Honey Balayage',
+        category: 'Hair Styling',
+        image: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=80',
+        description: 'Seamless hand-painted honey champagne highlights blended softly with natural dark roots using Olaplex bond repair.'
+      },
+      {
+        id: 'img-3',
+        title: 'Rose Gold Pearl Chrome Nails',
+        category: 'Nail Art',
+        image: 'https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1000&q=80',
+        description: 'Custom almond acrylic extensions with mother-of-pearl chrome finish and hand-set crystal accents.'
+      },
+      {
+        id: 'img-4',
+        title: 'HydraFacial Glass Skin Glow',
+        category: 'Skincare & Glow',
+        image: 'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=1000&q=80',
+        description: '6-Step medical HydraFacial session with vortex pore extraction and hyaluronic acid micro-infusion.'
+      },
+      {
+        id: 'img-5',
+        title: 'Smokey Gold Crease Eye Glam',
+        category: 'Eye Makeup',
+        image: 'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=1000&q=80',
+        description: 'Intense winged smokey eyeshadow artwork with 24K gold foil flakes and fluttery mink lashes.'
+      },
+      {
+        id: 'img-6',
+        title: 'Engagement Soft Rose Dewy Look',
+        category: 'Bridal Makeovers',
+        image: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1000&q=80',
+        description: 'Luminous skin texture with soft blush tones and effortless romantic hair waves for ring ceremonies.'
+      },
+      {
+        id: 'img-7',
+        title: 'Textured Bridal Updo Waves',
+        category: 'Hair Styling',
+        image: 'https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=1000&q=80',
+        description: 'Elegant low bridal hair bun styled with soft voluminous face-framing waves and fresh jasmine pins.'
+      },
+      {
+        id: 'img-8',
+        title: 'Minimalist Nude Marble Nails',
+        category: 'Nail Art',
+        image: 'https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=1000&q=80',
+        description: 'Subtle nude gel overlay with subtle white marble veining and gold leaf foil highlights.'
+      },
+      {
+        id: 'img-9',
+        title: '24K Gold Radiance Facial Spa',
+        category: 'Skincare & Glow',
+        image: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1000&q=80',
+        description: 'Pure 24K gold foil leaf facial massage designed to stimulate collagen production and restore youthful glow.'
+      },
+      {
+        id: 'img-10',
+        title: 'Glitter Cut-Crease Eye Art',
+        category: 'Eye Makeup',
+        image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1000&q=80',
+        description: 'Precision cut-crease eye art highlighted with micro-champagne glitter and defined winged liner.'
+      }
+    ];
+
+    const CATEGORIES = [
+      'All',
+      'Bridal Makeovers',
+      'Hair Styling',
+      'Nail Art',
+      'Skincare & Glow',
+      'Eye Makeup'
+    ];
+
+    let activeCategory = 'All';
+    let searchQuery = '';
+    let filteredItems = [...GALLERY_ITEMS];
+    let currentLightboxIndex = 0;
+
+    window.addEventListener('DOMContentLoaded', () => {
+      renderCategoryPills();
+      handleSearchAndFilter();
+      setupKeyboardNav();
+    });
+
+    // Render Filter Pills
+    function renderCategoryPills() {
+      const container = document.getElementById('category-pills');
+      container.innerHTML = CATEGORIES.map(cat => {
+        const isActive = activeCategory === cat;
+        const activeCls = isActive
+          ? 'bg-roseGold text-white border-roseGold shadow-sm font-semibold'
+          : 'bg-creamCard text-charcoalMuted border-warmBorder hover:border-roseGold hover:text-charcoalDark';
+
+        return `
+          <button 
+            onclick="selectCategory('${cat}')"
+            class="px-4 py-2 rounded-full text-xs transition-all duration-300 border whitespace-nowrap ${activeCls}"
+          >
+            ${cat}
+          </button>
+        `;
+      }).join('');
+    }
+
+    function selectCategory(cat) {
+      activeCategory = cat;
+      renderCategoryPills();
+      handleSearchAndFilter();
+    }
+
+    function clearSearch() {
+      document.getElementById('gallery-search').value = '';
+      document.getElementById('clear-search-btn').classList.add('hidden');
+      searchQuery = '';
+      handleSearchAndFilter();
+    }
+
+    function resetFilters() {
+      activeCategory = 'All';
+      clearSearch();
+    }
+
+    function handleSearchAndFilter() {
+      const input = document.getElementById('gallery-search');
+      searchQuery = input.value.toLowerCase().trim();
+
+      const clearBtn = document.getElementById('clear-search-btn');
+      if (searchQuery.length > 0) clearBtn.classList.remove('hidden');
+      else clearBtn.classList.add('hidden');
+
+      filteredItems = GALLERY_ITEMS.filter(item => {
+        const matchesCat = activeCategory === 'All' || item.category === activeCategory;
+        const matchesQuery = searchQuery === '' || 
+          item.title.toLowerCase().includes(searchQuery) ||
+          item.category.toLowerCase().includes(searchQuery) ||
+          item.description.toLowerCase().includes(searchQuery);
+
+        return matchesCat && matchesQuery;
+      });
+
+      renderGrid();
+    }
+
+    function renderGrid() {
+      const grid = document.getElementById('gallery-grid');
+      const emptyState = document.getElementById('empty-state');
+      document.getElementById('visible-count').textContent = filteredItems.length;
+
+      if (filteredItems.length === 0) {
+        grid.innerHTML = '';
+        emptyState.classList.remove('hidden');
+        return;
+      }
+
+      emptyState.classList.add('hidden');
+
+      grid.innerHTML = filteredItems.map((item, index) => {
+        return `
+          <div 
+            onclick="openLightbox(${index})"
+            class="group bg-creamCard rounded-2xl overflow-hidden border border-warmBorder hover:border-roseGold/60 shadow-soft-card hover:shadow-hover-card transition-all duration-500 cursor-pointer flex flex-col justify-between"
+          >
+            <!-- Image Aspect Wrapper -->
+            <div class="relative h-64 sm:h-72 overflow-hidden bg-creamMuted">
+              <img 
+                src="${item.image}" 
+                alt="${item.title}" 
+                class="w-full h-full object-cover img-zoom"
+                loading="lazy"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-charcoalDark/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                <span class="text-white text-xs font-medium flex items-center gap-1.5">
+                  <i class="fa-solid fa-expand text-roseGold"></i> View Look
+                </span>
+              </div>
+              <span class="absolute top-3 left-3 bg-creamCard/90 backdrop-blur-md text-charcoalDark text-[10px] font-medium uppercase tracking-wider px-2.5 py-1 rounded-full border border-warmBorder shadow-sm">
+                ${item.category}
+              </span>
+            </div>
+
+            <!-- Content Footer -->
+            <div class="p-4 sm:p-5">
+              <h3 class="font-serif text-lg font-semibold text-charcoalDark group-hover:text-roseGold transition-colors truncate">
+                ${item.title}
+              </h3>
+              <p class="text-xs text-charcoalMuted line-clamp-2 mt-1 font-light leading-relaxed">
+                ${item.description}
+              </p>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function openLightbox(index) {
+      currentLightboxIndex = index;
+      const item = filteredItems[currentLightboxIndex];
+      if (!item) return;
+
+      document.getElementById('lb-image').src = item.image;
+      document.getElementById('lb-title').textContent = item.title;
+      document.getElementById('lb-category').textContent = item.category;
+      document.getElementById('lb-description').textContent = item.description;
+
+      const whatsappMessage = encodeURIComponent(`Hi Oyster by Shifali, I am looking at "${item.title}" on your website gallery and would like to inquire about availability.`);
+      document.getElementById('lb-whatsapp-btn').href = `https://wa.me/919419100000?text=${whatsappMessage}`;
+
+      const modal = document.getElementById('lightbox-modal');
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightbox-modal');
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    function navigateLightbox(direction) {
+      if (filteredItems.length === 0) return;
+      currentLightboxIndex += direction;
+      if (currentLightboxIndex < 0) currentLightboxIndex = filteredItems.length - 1;
+      if (currentLightboxIndex >= filteredItems.length) currentLightboxIndex = 0;
+      openLightbox(currentLightboxIndex);
+    }
+
+    function handleModalBackgroundClick(e) {
+      if (e.target.id === 'lightbox-modal') {
+        closeLightbox();
+      }
+    }
+
+    function setupKeyboardNav() {
+      window.addEventListener('keydown', (e) => {
+        const modal = document.getElementById('lightbox-modal');
+        if (modal.classList.contains('hidden')) return;
+
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') navigateLightbox(-1);
+        if (e.key === 'ArrowRight') navigateLightbox(1);
+      });
+    }
+  </script>
+</body>
+</html>
