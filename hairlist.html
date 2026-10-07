@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair Services & Pricing | Oyster Beauty Lounge By Shifali</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            gold: '#D4AF37',
+                            goldHover: '#B89528',
+                            roseGold: '#E8C5B8',
+                            softBeige: '#FAF7F2',
+                            cardBeige: '#F4ECE1',
+                            sand: '#E6DCCF',
+                            charcoal: '#1A1818',
+                            warmGray: '#665E5A',
+                            lightGray: '#8C837E'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+                        sans: ['"Montserrat"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .bg-luxury-pattern {
+            background-image: radial-gradient(#d4af37 0.5px, transparent 0.5px), radial-gradient(#d4af37 0.5px, #faf7f2 0.5px);
+            background-size: 24px 24px;
+            background-position: 0 0, 12px 12px;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-brand-softBeige text-brand-charcoal font-sans antialiased min-h-screen flex flex-col selection:bg-brand-roseGold selection:text-brand-charcoal">
+
+    <div class="bg-brand-charcoal text-brand-roseGold text-xs py-2.5 px-4 text-center font-medium tracking-widest uppercase border-b border-brand-gold/20">
+        <span>✨ Oyster Beauty Lounge By Shifali • Hair Price List</span>
+    </div>
+
+    <header class="sticky top-0 z-40 bg-brand-softBeige/95 backdrop-blur-md border-b border-brand-sand/70 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo -->
+                <a href="https://www.oysterbyshifali.com" class="flex flex-col items-start group">
+                    <span class="font-serif text-2xl sm:text-3xl font-bold tracking-wider text-brand-charcoal group-hover:text-brand-gold transition duration-200">OYSTER</span>
+                    <span class="text-[10px] sm:text-xs font-semibold tracking-[0.25em] text-brand-warmGray uppercase">Beauty Lounge • By Shifali</span>
+                </a>
+
+                <!-- Desktop Links -->
+                <nav class="hidden md:flex items-center space-x-8 text-xs font-medium tracking-widest uppercase text-brand-warmGray">
+                    <a href="https://www.oysterbyshifali.com" class="hover:text-brand-gold transition duration-200">Home</a>
+                    <a href="#" class="text-brand-gold font-semibold border-b-2 border-brand-gold pb-1">Hair Prices</a>
+                    <a href="https://www.oysterbyshifali.com/brow.html" class="hover:text-brand-gold transition duration-200">Brows & Facial</a>
+                    <a href="#contact-info" class="hover:text-brand-gold transition duration-200">Contact & Hours</a>
+                </nav>
+
+                <!-- Phone / Contact Link -->
+                <div class="hidden md:flex items-center text-xs font-medium text-brand-charcoal">
+                    <a href="tel:" class="flex items-center gap-2 bg-brand-cardBeige border border-brand-sand hover:border-brand-gold px-4 py-2 rounded-full transition duration-200">
+                        <i data-lucide="phone" class="w-3.5 h-3.5 text-brand-gold"></i>
+                        <span class="tracking-wider">Inquiries & Contact</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Toggle Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="p-2 text-brand-charcoal focus:outline-none" aria-label="Toggle Navigation Menu">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-softBeige border-b border-brand-sand px-4 pt-3 pb-6 space-y-3">
+            <a href="https://www.oysterbyshifali.com" class="block py-2 text-xs font-medium uppercase tracking-wider text-brand-warmGray hover:text-brand-gold">Home</a>
+            <a href="#" class="block py-2 text-xs font-semibold uppercase tracking-wider text-brand-gold">Hair Prices</a>
+            <a href="https://www.oysterbyshifali.com/brow.html" class="block py-2 text-xs font-medium uppercase tracking-wider text-brand-warmGray hover:text-brand-gold">Brows & Facial</a>
+            <a href="#contact-info" onclick="toggleMobileMenu()" class="block py-2 text-xs font-medium uppercase tracking-wider text-brand-warmGray hover:text-brand-gold">Contact & Hours</a>
+        </div>
+    </header>
+
+    <section class="relative bg-brand-cardBeige border-b border-brand-sand py-12 lg:py-16 overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-luxury-pattern pointer-events-none"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="inline-block text-brand-gold text-xs font-semibold tracking-[0.3em] uppercase mb-2">Bespoke Haircare & Styling</span>
+            <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-normal text-brand-charcoal mb-4">Hair Price Menu</h1>
+            <div class="w-16 h-0.5 bg-brand-gold mx-auto mb-5"></div>
+            <p class="text-brand-warmGray max-w-xl mx-auto text-xs sm:text-sm leading-relaxed">
+                Comprehensive pricing for our custom haircutting, coloring, chemical smoothing, and revitalizing hair treatments.
+            </p>
+        </div>
+    </section>
+
+    <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 relative z-20">
+        <div class="bg-white rounded-2xl shadow-lg p-4 border border-brand-sand/80">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-4">
+                
+                <!-- Category Scroll Tabs -->
+                <div class="flex items-center space-x-2 overflow-x-auto w-full lg:w-auto pb-1 lg:pb-0 no-scrollbar" id="category-tabs">
+                    <button onclick="filterCategory('all')" data-cat="all" class="cat-btn active px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition-all whitespace-nowrap bg-brand-charcoal text-white shadow-sm">
+                        All Services
+                    </button>
+                    <button onclick="filterCategory('haircuts')" data-cat="haircuts" class="cat-btn px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition-all whitespace-nowrap bg-brand-softBeige text-brand-warmGray hover:bg-brand-sand">
+                        Haircuts & Styling
+                    </button>
+                    <button onclick="filterCategory('color')" data-cat="color" class="cat-btn px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition-all whitespace-nowrap bg-brand-softBeige text-brand-warmGray hover:bg-brand-sand">
+                        Color Services
+                    </button>
+                    <button onclick="filterCategory('chemical')" data-cat="chemical" class="cat-btn px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition-all whitespace-nowrap bg-brand-softBeige text-brand-warmGray hover:bg-brand-sand">
+                        Chemical Services
+                    </button>
+                    <button onclick="filterCategory('treatments')" data-cat="treatments" class="cat-btn px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition-all whitespace-nowrap bg-brand-softBeige text-brand-warmGray hover:bg-brand-sand">
+                        Hair Treatments
+                    </button>
+                </div>
+
+                <!-- Instant Search Input -->
+                <div class="relative w-full lg:w-64">
+                    <i data-lucide="search" class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-brand-warmGray"></i>
+                    <input type="text" id="service-search" oninput="handleSearch()" placeholder="Search hair menu..." class="w-full pl-9 pr-4 py-2 rounded-full bg-brand-softBeige border border-brand-sand text-xs focus:outline-none focus:ring-2 focus:ring-brand-gold text-brand-charcoal placeholder-brand-warmGray/60">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow">
+        
+        <div id="service-container" class="space-y-12">
+
+            <!-- SECTION 1: HAIRCUTS & STYLING -->
+            <section class="service-group" data-category="haircuts">
+                <div class="flex items-center space-x-4 mb-6">
+                    <h2 class="font-serif text-2xl sm:text-3xl text-brand-charcoal font-semibold tracking-wide">Haircuts & Styling</h2>
+                    <div class="flex-grow h-px bg-brand-sand"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    
+                    <!-- Hair Cut / Trim -->
+                    <div class="service-item bg-white p-5 rounded-xl border border-brand-sand/80 shadow-sm flex justify-between items-start hover:border-brand-gold/60 transition duration-200">
+                        <div class="pr-4">
+                            <h3 class="font-medium text-base text-brand-charcoal">Hair Cut / Trim</h3>
+                        </div>
+                        <span class="font-serif text-lg font-bold text-brand-gold whitespace-nowrap">$25–$35</span>
+                    </div>
+
+                    <!-- Women's Haircut -->
+                    <div class="service-item bg-white p-5 rounded-xl border border-brand-sand/80 shadow-sm flex justify-between items-start hover:border-brand-gold/60 transition duration-200">
+                        <div class="pr-4">
+                            <h3 class="font-medium text-base text-brand-charcoal">Women's Haircut</h3>
+                            <p class="text-xs text-brand-warmGray mt-1">(wash & blow included)</p>
+                        </div>
+                        <span class="font-serif text-lg font-bold text-brand-gold whitespace-nowrap">$60+</span>
+                    </div>
+
+                    <!-- Blowout -->
+                    <div class="service-item bg-white p-5 rounded-xl border border-brand-sand/80 shadow-sm flex justify-between items-start hover:border-brand-gold/60 transition duration-200">
+                        <div class="pr-4">
+                            <h3 class="font-medium text-base text-brand-charcoal">Blowout – Wash & Blowdry</h3>
+                        </div>
+                        <span class="font-serif text-lg font-bold text-brand-gold whitespace-nowrap">$80</span>
+                    </div>
+
+                    <!-- Updo -->
+                    <div class="service-item bg-white p-5 rounded-xl border border-brand-sand/80 shadow-sm flex justify-between items-start hover:border-brand-gold/60 transition duration-200">
+                        <div class="pr-4">
+                            <h3 class="font-medium text-base text-brand-charcoal">Updo</h3>
+                        </div>
+                        <span class="font-serif text-lg font-bold text-brand-gold whitespace-nowrap">$80–$120</span>
+                    </div>
+
+                    <!-- Curls Only -->
+                    <div class="service-item bg-white p-5 rounded-xl border border-brand-sand/80 shadow-sm flex justify-between items-start hover:border-brand-gold/60 transition duration-200">
+                        <div class="pr-4">
+                            <h3 class="font-medium text-base text-brand-charcoal">Curls Only</h3>
+                        </div>
+                        <span class="font-serif text-lg font-bold text-brand-gold whitespace-nowrap">$60</span>
+                    </div>
+
+                    <!-- Hair Ironing -->
+                    <div class="service-item bg-white p-5 rounded-xl border border-brand-sand/80 shadow-sm flex justify-between items-start hover:border-brand-gold/60 transition duration-200">
+                        <div class="pr-4">
+                            <h3 class="font-medium text-base text-brand-charcoal">Hair Ironing</h3>
+                        </div>
+                        <span class="font-serif text-lg font-bold text-brand-gold whitespace-nowrap">$80</span>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- SECTION 2: COLOR SERVICES -->
+            <section class="service-group" data-category="color">
+                <div class="flex items-center space-x-4 mb-6">
+                    <h2 class="font-serif text-2xl sm:text-3xl text-brand-charcoal font-semibold tracking-wide">Color Services</h2>
+                    <div class="flex-grow h-px bg-brand-sand"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    
+                    <!-- Root Touch-Up -->
+                    <div class="service-item bg-white p-5 rounded-xl border border-brand-sand/80 shadow-sm flex justify-between items-start hover:border-brand-gold/60 transition duration-200">
+                        <div class="pr-4">
+                            <h3 class="font-medium text-base text-brand-charcoal">Root Touch-Up</h3>
+                            <p class="text-xs text-brand-warmGray mt-1">Color on Roots Only <span class="italic">(Blowdry not included)</span></p>
+                        </div>
+                        <span class="font-serif text-lg font-bold text-brand-gold whitespace-nowrap">$50</span>
+                    </div>
+
+                    <!-- Full Head Color (Single Process) -->
+                    <div class="service-item bg-white p-5 rounded-xl border border-brand-sand/80 shadow-sm flex justify-between items-start hover:border-brand-gold/60 transition duration-200">
+                        <div class="pr-4">
+                            <h3 class="font-medium text-base text-brand-charcoal">Full Head Color <span class="text-xs text-brand-warmGray font-normal">(Single Process)</span></h3>
+                        </div>
+                        <span class="font-serif text-lg font-bold text-brand-gold whitespace-nowrap">$90–$120</span>
+                    </div>
+
+                    <!-- Full Head Color (Double Process) -->
+                    <div class="service-item bg-white p-5 rounded-xl border border-brand-sand/80 shadow-sm flex justify-between items-start hover:border-brand-gold/60 transition duration-200">
+                        <div class="pr-4">
+                            <h3 class="font-medium text-base text-brand-charcoal">Full Head Color <span class="text-xs text-brand-warmGray font-normal">(Double Process)</span></h3>
+                        </div>
+                        <span class="font-serif text-lg font-bold text-brand-gold whitespace-nowrap">$150+</span>
+                    </div>
+
+                    <!-- Glaze / Toner -->
+                    <div class="service-item bg-white p-5 rounded-xl border border-brand-sand/80 shadow-sm flex justify-between items-start hover:border-brand-gold/60 transition duration-200">
+                        <div class="pr-4">
+                            <h3 class="font-medium text-base text-brand-charcoal">Glaze / Toner</h3>
+                        </div>
+                        <span class="font-serif text-lg font-bold text-brand-gold whitespace-nowrap">$35</span>
+                    </div>
+
+                    <!-- Partial Highlights -->
+                    <div class="service-item bg-white p-5 rounded-xl border border-brand-sand/80 shadow-sm flex justify-between items-start hover:border-brand-gold/60 transition duration-200">
+                        <div class="pr-4">
+                            <h3 class="font-medium text-base text-brand-charcoal">Partial Highlights</h3>
+                        </div>
+                        <span class="font-serif text-lg font-bold text-brand-gold whitespace-nowrap">$100</span>
+                    </div>
+
+                    <!-- Full Head Highlights -->
+                    <div class="service-item bg-white p-5 rounded-xl border border-brand-sand/80 shadow-sm flex justify-between items-start hover:border-brand-gold/60 transition duration-200">
+                        <div class="pr-4">
+                            <h3 class="font-medium text-base text-brand-charcoal">Full Head Highlights</h3>
+                        </div>
+                        <span class="font-serif text-lg font-bold text-brand-gold whitespace-nowrap">$200+</span>
+                    </div>
+
+                    <!-- Balayage -->
+                    <div class="service-item bg-white p-5 rounded-xl border border-brand-sand/80 shadow-sm flex justify-between items-start hover:border-brand-gold/60 transition duration-200 md:col-span-2">
+                        <div class="pr-4">
+                            <h3 class="font-medium text-base text-brand-charcoal">Balayage</h3>
+                        </div>
+                        <span class="font-serif text-lg font-bold text-brand-gold whitespace-nowrap">$250</span>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- SECTION 3: CHEMICAL SERVICES -->
+            <section class="service-group" data-category="chemical">
+                <div class="flex items-center space-x-4 mb-6">
+                    <h2 class="font-serif text-2xl sm:text-3xl text-brand-charcoal font-semibold tracking-wide">Chemical Services</h2>
+                    <div class="flex-grow h-px bg-brand-sand"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    
+                    <!-- Keratin Treatment -->
+                    <div class="service-item bg-white p-5 rounded-xl border border-brand-sand/80 shadow-sm flex justify-between items-start hover:border-brand-gold/60 transition duration-200">
+                        <div class="pr-4">
+                            <h3 class="font-medium text-base text-brand-charcoal">Keratin Treatment</h3>
+                        </div>
+                        <span class="font-serif text-lg font-bold text-brand-gold whitespace-nowrap">$250+</span>
+                    </div>
+
+                    <!-- Permanent Straightening -->
+                    <div class="service-item bg-white p-5 rounded-xl border border-brand-sand/80 shadow-sm flex justify-between items-start hover:border-brand-gold/60 transition duration-200">
+                        <div class="pr-4">
+                            <h3 class="font-medium text-base text-brand-charcoal">Permanent Straightening</h3>
+                        </div>
+                        <span class="font-serif text-lg font-bold text-brand-gold whitespace-nowrap">$400+</span>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- SECTION 4: HAIR TREATMENTS -->
+            <section class="service-group" data-category="treatments">
+                <div class="flex items-center space-x-4 mb-6">
+                    <h2 class="font-serif text-2xl sm:text-3xl text-brand-charcoal font-semibold tracking-wide">Hair Treatments</h2>
+                    <div class="flex-grow h-px bg-brand-sand"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    
+                    <!-- Hair Spa -->
+                    <div class="service-item bg-white p-5 rounded-xl border border-brand-sand/80 shadow-sm flex justify-between items-start hover:border-brand-gold/60 transition duration-200">
+                        <div class="pr-4">
+                            <h3 class="font-medium text-base text-brand-charcoal">Hair Spa</h3>
+                        </div>
+                        <span class="font-serif text-lg font-bold text-brand-gold whitespace-nowrap">$60+</span>
+                    </div>
+
+                    <!-- Olaplex -->
+                    <div class="service-item bg-white p-5 rounded-xl border border-brand-sand/80 shadow-sm flex justify-between items-start hover:border-brand-gold/60 transition duration-200">
+                        <div class="pr-4">
+                            <h3 class="font-medium text-base text-brand-charcoal">Olaplex</h3>
+                        </div>
+                        <span class="font-serif text-lg font-bold text-brand-gold whitespace-nowrap">$70+</span>
+                    </div>
+
+                    <!-- Deep Conditioning -->
+                    <div class="service-item bg-white p-5 rounded-xl border border-brand-sand/80 shadow-sm flex justify-between items-start hover:border-brand-gold/60 transition duration-200">
+                        <div class="pr-4">
+                            <h3 class="font-medium text-base text-brand-charcoal">Deep Conditioning</h3>
+                        </div>
+                        <span class="font-serif text-lg font-bold text-brand-gold whitespace-nowrap">$35+</span>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- NO RESULTS STATE -->
+            <div id="no-results" class="hidden text-center py-12">
+                <i data-lucide="scissors" class="w-10 h-10 text-brand-sand mx-auto mb-2"></i>
+                <h3 class="font-serif text-lg font-medium text-brand-charcoal">No Hair Services Found</h3>
+                <p class="text-xs text-brand-warmGray mt-1">Try searching for a different keyword or view all services.</p>
+            </div>
+
+        </div>
+
+        <!-- Salon Service Disclaimer -->
+        <div class="mt-12 bg-brand-cardBeige border border-brand-sand rounded-xl p-5 text-center text-xs text-brand-warmGray leading-relaxed max-w-2xl mx-auto">
+            <span class="font-semibold text-brand-charcoal uppercase tracking-wider block mb-1">Pricing Information</span>
+            Prices are subject to variation depending on hair length, thickness, condition, and specific client requirements. Please consult with our salon team during your visit.
+        </div>
+    </main>
+
+    <footer id="contact-info" class="bg-brand-softBeige border-t border-brand-sand pt-12 pb-8 text-xs text-brand-warmGray">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                
+                <!-- Brand Info -->
+                <div class="space-y-3">
+                    <div class="flex flex-col">
+                        <span class="font-serif text-xl font-bold tracking-wider text-brand-charcoal">OYSTER</span>
+                        <span class="text-[9px] font-semibold tracking-[0.2em] text-brand-warmGray uppercase">Beauty Lounge • By Shifali</span>
+                    </div>
+                    <p class="text-xs leading-relaxed text-brand-warmGray">
+                        Providing premier beauty, hair styling, color, and aesthetic treatment experiences.
+                    </p>
+                </div>
+
+                <!-- Salon Hours -->
+                <div>
+                    <h4 class="font-serif text-sm font-semibold text-brand-charcoal tracking-wider uppercase mb-3">Salon Hours</h4>
+                    <ul class="space-y-1.5">
+                        <li class="flex justify-between border-b border-brand-sand/40 pb-1"><span>Monday – Saturday:</span> <span>10:00 AM – 7:00 PM</span></li>
+                        <li class="flex justify-between border-b border-brand-sand/40 pb-1"><span>Sunday:</span> <span>By Appointment Only</span></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Information -->
+                <div>
+                    <h4 class="font-serif text-sm font-semibold text-brand-charcoal tracking-wider uppercase mb-3">Contact Information</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="globe" class="w-4 h-4 text-brand-gold"></i>
+                            <a href="https://www.oysterbyshifali.com" target="_blank" class="hover:text-brand-gold transition">oysterbyshifali.com</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-brand-gold"></i>
+                            <span>Oyster Beauty Lounge Inc.</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="border-t border-brand-sand/60 pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] text-brand-lightGray">
+                <p>&copy; <span id="year"></span> Oyster Beauty Lounge Inc. By Shifali. All Rights Reserved.</p>
+                <p class="mt-2 sm:mt-0">Hair Services & Pricing</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Icons & Dynamic Year
+        document.addEventListener("DOMContentLoaded", () => {
+            lucide.createIcons();
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Category Filter Logic
+        function filterCategory(category) {
+            // Update Active Tab Buttons
+            const buttons = document.querySelectorAll('.cat-btn');
+            buttons.forEach(btn => {
+                if (btn.getAttribute('data-cat') === category) {
+                    btn.classList.remove('bg-brand-softBeige', 'text-brand-warmGray');
+                    btn.classList.add('bg-brand-charcoal', 'text-white', 'shadow-sm');
+                } else {
+                    btn.classList.remove('bg-brand-charcoal', 'text-white', 'shadow-sm');
+                    btn.classList.add('bg-brand-softBeige', 'text-brand-warmGray');
+                }
+            });
+
+            // Filter Section visibility
+            const groups = document.querySelectorAll('.service-group');
+            let hasVisible = false;
+
+            groups.forEach(group => {
+                if (category === 'all' || group.getAttribute('data-category') === category) {
+                    group.classList.remove('hidden');
+                    hasVisible = true;
+                } else {
+                    group.classList.add('hidden');
+                }
+            });
+
+            // Reset search input
+            document.getElementById('service-search').value = '';
+            showNoResults(!hasVisible);
+        }
+
+        // Live Search Input Handler
+        function handleSearch() {
+            const query = document.getElementById('service-search').value.toLowerCase().trim();
+            const groups = document.querySelectorAll('.service-group');
+            let overallMatchCount = 0;
+
+            if (query.length > 0) {
+                document.querySelectorAll('.cat-btn').forEach(btn => {
+                    btn.classList.remove('bg-brand-charcoal', 'text-white');
+                    btn.classList.add('bg-brand-softBeige', 'text-brand-warmGray');
+                });
+            }
+
+            groups.forEach(group => {
+                let groupHasMatch = false;
+                const groupItems = group.querySelectorAll('.service-item');
+
+                groupItems.forEach(item => {
+                    const text = item.textContent.toLowerCase();
+                    if (text.includes(query)) {
+                        item.classList.remove('hidden');
+                        groupHasMatch = true;
+                        overallMatchCount++;
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+
+                if (groupHasMatch) {
+                    group.classList.remove('hidden');
+                } else {
+                    group.classList.add('hidden');
+                }
+            });
+
+            showNoResults(overallMatchCount === 0);
+        }
+
+        function showNoResults(show) {
+            const noRes = document.getElementById('no-results');
+            if (show) {
+                noRes.classList.remove('hidden');
+            } else {
+                noRes.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
